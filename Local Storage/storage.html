@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Local Storage</title>
+</head>
+<body>
+  <script>
+    /*
+    1. Persistant data storage in the browser.
+    2. setItem: Stores data as key-value pairs.
+    3. Only strings data as key-value pairs.
+    4. getItem: Retrieves data based on key.
+    5. Other Methods: localStorage.clear(), localStorage.removeItem().
+    6. Do not store sensitive information. Viewable in storage console.
+    */
+
+    let product = {
+      name : 'Mobile',
+      price : 82000,
+      brand : 'Samsung',
+    }
+    localStorage.setItem('product',JSON.stringify(product));
+    localStorage.removeItem('product');
+    localStorage.setItem('name','Adarsh')
+    localStorage.clear();
+    console.log(JSON.parse(localStorage.getItem('product')));
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Learning HTML</title>
+  <!-- style tag is used to include css code inside the html file  -->
+  <!-- In css there are three ways which can be used to select elements of html for design -->
+  <!-- they are element selector(by name of element like h1), class selector(.class value), id selector(# id value) -->
+  <style>
+    .para{
+      background-color: black;
+      color: greenyellow;
+    }
+    #div{
+      color: red;
+    }
+    h2{
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+  <p class="para">Hi this is my paragraph</p>
+  <div id = "div">
+    <h1>This is heading</h1>
+    <h2>This is second heading tag</h2>
+    <h3> This is the third heading tag</h3>
+  </div>
+  <!-- Script tag is used to write code of javascript of any other scripting language -->
+  <!-- Generally we use script tag at the end of the body content so the loading of page don't take time while executing the script code -->
+  <!-- Selectors in javascipts are getElementById, getElementByClassName and querySelector. -->
+  <!-- In querySelector we can pass the same syntax of selecting tag in css. eg. document.querySelector('#id_value') -->
+  <script>
+    console.log("Form here we are executing the js code. ");
+    alert("you got scared by the alert popup. Fuck you!")
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Typing Test</title>
+</head>
+<body>
+    <div class="container">
+        <div id="text-container"></div>
+        <textarea id="user-input" placeholder="Start typing..."></textarea>
+        <div id="result-container"></div>
+        <div id="timer-container">Time: <span id="timer">0</span>s</div>
+        <button onclick="startTest(15)">15s</button>
+        <button onclick="startTest(30)">30s</button>
+        <button onclick="startTest(60)">1min</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

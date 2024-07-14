@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cricket Game</title>
+  <style>
+    body{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bat Ball Stump Game</h1>
+  <button onclick="console.log('You have choosen Bat');
+  let randomNumber = Math.random() * 3;
+  let computerChoice; // Global scope variable accessible in any block
+  if(randomNumber > 0 && randomNumber <= 1){
+    computerChoice = 'Bat';
+    // console.log('Computer choice is Bat');
+  }else if(randomNumber > 1 && randomNumber <= 2){
+    computerChoice = 'Ball';
+    // console.log('Computer choice is Ball');
+  }else{
+    computerChoice = 'Stump';
+    // console.log('Computer choice is Stump');
+  }
+  console.log(`Computer choice is ${computerChoice}`);
+
+  let resultmsg;
+
+  if(computerChoice === 'Ball'){
+    resultmsg = 'you won !!!'
+    console.log('You won !!!');
+  }else if(computerChoice === 'Bat'){
+    resultmsg = `It's a tie !!!`;
+    console.log(`It's a tie match !!!`)
+  }else if(computerChoice === 'Stump'){
+    resultmsg = 'You lose !!!';
+    console.log('You lose !!!!')
+  }
+
+  alert(` You have choosen Bat \n Computer choice is ${computerChoice} \n And ${resultmsg}`)
+  ">Bat</button>
+
+
+  <button onclick="console.log('You have choosen Ball');
+  let randomNumber1;
+  let computerChoice1;
+  if(randomNumber1 > 0 && randomNumber1 <= 1){
+    computerChoice1 = 'Bat';
+    // console.log('Computer choice is Bat');
+  }else if(randomNumber1 > 1 && randomNumber1 <= 2){
+    computerChoice1 = 'Ball';
+    // console.log('Computer choice is Ball');
+  }else{
+    computerChoice1 = 'Stump';
+    // console.log('Computer choice is Stump');
+  }
+  console.log(`Computer choice is ${computerChoice1}`);
+
+  
+  let resultmsg1;
+  if(computerChoice1 === 'Stump'){
+    resultmsg1 = 'you won !!!'
+    console.log('You won !!!');
+  }else if(computerChoice1 === 'Ball'){
+    resultmsg1 = `It's a tie !!!`;
+    console.log(`It's a tie match !!!`)
+  }else if(computerChoice1 === 'Bat'){
+    resultmsg1 = 'You lose !!!';
+    console.log('You lose !!!!')
+  }
+
+  alert(` You have choosen Ball \n Computer choice is ${computerChoice1} \n And ${resultmsg1}`)">Ball</button>
+
+
+  <button onclick="console.log('You have choosen Stump');
+  let randomNumber2 = Math.random() * 3;
+  let computerChoice2; // Global scope variable accessible in any block
+  if(randomNumber2 > 0 && randomNumber2 <= 1){
+    computerChoice2 = 'Bat';
+    // console.log('Computer choice is Bat');
+  }else if(randomNumber2 > 1 && randomNumber2 <= 2){
+    computerChoice2 = 'Ball';
+    // console.log('Computer choice is Ball');
+  }else{
+    computerChoice2 = 'Stump';
+    // console.log('Computer choice is Stump');
+  }
+  console.log(`Computer choice is ${computerChoice2}`);
+
+  let resultmsg2;
+
+  if(computerChoice2 === 'Bat'){
+    resultmsg = 'you won !!!'
+    console.log('You won !!!');
+  }else if(computerChoice2 === 'Stump'){
+    resultmsg = `It's a tie !!!`;
+    console.log(`It's a tie match !!!`)
+  }else if(computerChoice2 === 'Ball'){
+    resultmsg = 'You lose !!!';
+    console.log('You lose !!!!')
+  }
+
+  alert(` You have choosen Bat \n Computer choice is ${computerChoice2} \n And ${resultmsg2}`)">Stump</button>
+</body>
+</html>

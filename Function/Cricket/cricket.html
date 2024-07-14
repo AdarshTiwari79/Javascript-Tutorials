@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Modified Cricket Game</title>
+  <style>
+    body{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bat Ball Stump Game</h1>
+  <button onclick="
+    let computerChoice = randomChoiceGenerator();
+    let resultmsg = getResult('Bat' , computerChoice);
+    showResult('Bat', computerChoice, resultmsg)">
+  Bat</button>
+
+
+  <button onclick="
+    computerChoice = randomChoiceGenerator();
+    resultmsg = getResult('Ball' , computerChoice);
+    showResult('Ball', computerChoice, resultmsg)">
+  Ball</button>
+
+
+  <button onclick="
+    computerChoice = randomChoiceGenerator();
+    resultmsg = getResult('Stump' , computerChoice);   
+    showResult('Stump', computerChoice, resultmsg)">
+  Stump</button>
+
+  <script>
+    
+    function randomChoiceGenerator(){
+      let randomNumber = Math.random() * 3;
+     
+      if(randomNumber > 0 && randomNumber <= 1){
+        return 'Bat';
+      }else if(randomNumber > 1 && randomNumber <= 2){
+        return 'Ball';
+      }else{
+        return 'Stump';
+      }
+    }
+
+    function getResult(userMove, computerMove){
+      if(userMove === 'Bat'){
+        if(computerMove === 'Ball'){
+          return 'you won !!!';
+        }else if(computerMove === 'Bat'){
+          return `It's a tie !!!`;
+        }else if(computerMove === 'Stump'){
+          return 'You lose !!!';
+        }
+      }else if(userMove === 'Ball'){
+        if(computerMove === 'Stump'){
+          return 'you won !!!'
+        }else if(computerMove === 'Ball'){
+          return `It's a tie !!!`;
+        }else if(computerMove === 'Bat'){
+          return 'You lose !!!';
+        }
+      }else{
+        if(computerChoice === 'Bat'){
+          return 'you won !!!'
+        }else if(computerChoice === 'Stump'){
+          return `It's a tie !!!`;
+        }else if(computerChoice === 'Ball'){
+          return 'You lose !!!';
+        }
+      }
+    }
+
+    function showResult(userMove, computerMove, resultmsg){
+      alert(` You have choosen ${userMove} \n Computer choice is ${computerMove} \n And ${resultmsg}`)
+    }
+
+  </script>
+</body>
+</html>
