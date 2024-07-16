@@ -33,6 +33,11 @@
   <button onclick="localStorage.clear() 
   resetScore();">Reset</button> 
 
+  <h1 id="first"></h1>
+  <h1 id="second"></h1>
+  <h1 id="third"></h1>
+  <h1 id="forth"></h1>
+
   <script>
     let scoreStr = localStorage.getItem('Score');
     let score;
@@ -42,10 +47,12 @@
         win : 0,
         lost : 0,
         tie : 0,
+        
       }; 
       score.showScore = function(){
         return `Won: ${score.win} \n Lost: ${score.lost} \n Tie: ${score.tie}`;
       }
+      showResult();
     }
     
     function randomChoiceGenerator(){
@@ -99,7 +106,11 @@
 
     function showResult(userMove, computerMove, resultmsg){
       localStorage.setItem('Score',JSON.stringify(score));
-      alert(` You have choosen ${userMove} \n Computer choice is ${computerMove} \n And ${resultmsg} \n ${score.showScore()} `);
+
+      document.querySelector('#first').innerText = userMove ? ` You have choosen ${userMove}` : '';
+      document.querySelector('#second').innerText = computerMove ? `Computer choice is ${computerMove}`: ''; 
+      document.querySelector('#third').innerText = resultmsg || '';
+      document.querySelector('#forth').innerText = score.showScore();
     }
 
   </script>
