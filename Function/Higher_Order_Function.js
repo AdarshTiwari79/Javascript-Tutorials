@@ -49,3 +49,30 @@ let cond = false;
 let obtainedFunc = functionFactory(cond);
 console.log ("from here HOF with returning function is executing")
 obtainedFunc();
+
+
+// set Interval is a method of window object which is baap of every object in browser based environment.
+console.log("starting....")
+
+const id = setInterval(() => {
+  console.log("this is ranjan")
+  some++;
+}, 4000);
+
+clearInterval(id);
+
+console.log("ending.....");
+
+// set Timeout is also method of window object 
+
+console.log("Starting of setTimeout");
+
+setTimeout(() => {
+  console.log("timed out thing")
+}, 4000);
+
+console.log("ending of setTimeout");
+
+
+
+
